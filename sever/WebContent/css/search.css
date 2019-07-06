@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.panel
+{
+    margin-top: 4%;
+    margin-left: 15%;
+    width: 70%;
+    height:50px;
+    display: none;
+    border-radius: 10px;
+    
+}
+
+#btn1{
+    margin-left: 2%;
+    margin-top: 0.5%;
+    width: 47%;
+    height: 40px;
+    background: rgba(0,100,240,0.3);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family:'Inconsolata', monospace;
+    letter-spacing: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 0 rgba(100, 100, 100, 0.8), 0 20px 25px 0 rgba(0, 0, 0, 0.0);
+    
+}
+
+#btn2{
+    margin-left: 2%;
+    margin-top: 0.5%;
+    width: 47%;
+    height: 40px;
+    background: rgba(0,100,240,0.3);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family:'Inconsolata', monospace;
+    letter-spacing: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 0 rgba(100, 100, 100, 0.8), 0 20px 25px 0 rgba(0, 0, 0, 0.0);
+}
+
+
+.container {
+  position:absolute;
+  top: ;
+  left: 5%;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  height:50px;
+}
+
+.container .search {
+  position: absolute;
+  margin: auto;
+  top: 5%;
+  right: 0;
+  bottom: 0;
+  left: 0%;
+  width: 80px;
+  height: 80px;
+  background: #47CF73;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(100, 100, 100, 0.8), 0 20px 25px 0 rgba(0, 0, 0, 0.0);
+}
+.container .search:hover {
+  cursor: pointer;
+}
+.container .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(45deg);
+  transition: all .5s;
+}
+.container .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all .5s;
+}
+.container input {
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: white;
+    font-size: 30px;
+  color: black;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  transition: all 1s;
+    box-shadow: 0 0 25px 0 rgba(100, 100, 100, 0.8), 0 20px 25px 0 rgba(0, 0, 0, 0.0);
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+.container input:hover {
+  cursor: pointer;
+}
+.container input:focus {
+  width: 90%;
+  opacity: 1;
+  cursor: text;
+}
+.container input:focus ~ .search {
+    
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.0), 0 0 0 0 rgba(0, 0, 0, 0.0);
+    background: rgba(0,0,0,0);
+}
+.container input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
